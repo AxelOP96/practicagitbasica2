@@ -1,28 +1,22 @@
 package ar.edu.unlam.pb1.finalAgosto;
 
+import java.util.Scanner;
+
 public class InterfazCallCenter {
-	
+	static Scanner teclado = new Scanner(System.in);
 	public static void main(String args[]) {
-			
-		System.out.println("Bienvenido al callcenter");
-	
-		System.out.println("************************");
-		System.out.println("Menu de opciones\n");
-		System.out.println("1 - Incorporar zona de cobertura");
-		System.out.println("2 - Dar de alta un nuevo contacto");
-		System.out.println("3 - Realizar nueva llamada");
-		System.out.println("4 - Ver informaci�n del contacto");
-		System.out.println("9 - Salir");
-		System.out.println("************************");
+		menu();	
+		Empresa tuenti = null;
+		int opcion = teclado.nextInt();
 	}
 	
 	private static void incorporarZonaDeCobertura() {
 		/*
 		 * Se registra un nuevo c�digo postal dentro de la zona de cobertura de la empresa
 		 */
-//		for(int i=0;i<Empresa[].length;i++) {
-//			
-//		}
+		System.out.println("Ingrese un codigo postal");
+		int codigo = teclado.nextInt();
+		//tuenti.agregarZonaDeCobertura(codigo);
 	}
 	
 	private static void darDeAltaNuevoContacto() {
@@ -48,4 +42,17 @@ public class InterfazCallCenter {
 		 * Se visualiza la informaci�n del contacto, incluso el listado de las llamadas que se le hicieron
 		 */
 	}
+	private static void menu() {
+		System.out.println("Bienvenido al callcenter");
+		
+		System.out.println("************************");
+		System.out.println("Menu de opciones\n");
+		System.out.println("1 - Incorporar zona de cobertura");
+		System.out.println("2 - Dar de alta un nuevo contacto");
+		System.out.println("3 - Realizar nueva llamada");
+		System.out.println("4 - Ver informaci�n del contacto");
+		System.out.println("9 - Salir");
+		System.out.println("************************");
+	}
+	
 }

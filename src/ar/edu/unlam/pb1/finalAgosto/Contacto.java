@@ -1,5 +1,7 @@
 package ar.edu.unlam.pb1.finalAgosto;
 
+import java.util.Arrays;
+
 public class Contacto {
 	
 	/*
@@ -137,12 +139,12 @@ public class Contacto {
 		return registrada;
 	}
 	
+	@Override
 	public String toString() {
-		/*
-		 * Muestra los datos de un contacto, entre los que se debe incluir el registro de las llamadas realizadas.
-		 */
-		
-		return "";
+		return "Contacto [nombre=" + nombre + ", celular=" + celular + ", email=" + email + ", direccion=" + direccion
+				+ ", codigoPostal=" + codigoPostal + ", localidad=" + localidad + ", provincia=" + provincia
+				+ ", esCliente=" + esCliente + ", deseaLlamada=" + deseaLlamada + ", registroDeLLamadas="
+				+ Arrays.toString(registroDeLLamadas) + "]";
 	}
 	
 }
