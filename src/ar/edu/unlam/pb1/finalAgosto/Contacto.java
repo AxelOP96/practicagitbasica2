@@ -25,6 +25,20 @@ public class Contacto {
 	private Provincia provincia;
 	private Boolean esCliente;
 	private Boolean deseaLlamada;
+	private Llamada[] registroDeLLamadas = new Llamada[50] ;
+	
+	public Contacto(){
+		this.nombre = nombre;
+		this.celular = celular;
+		this.email = email;
+		this.provincia = provincia;
+		this.direccion = direccion;
+		this.codigoPostal = codigoPostal;
+		this.localidad = localidad;
+		this.esCliente = esCliente;
+		this.deseaLlamada = deseaLlamada;
+		this.registroDeLLamadas = new Llamada[50];
+	}
 	
 	public void esEmailValido(String eMail) {
 		/*
@@ -114,7 +128,12 @@ public class Contacto {
 		 * Registra una nueva llamada asociada al contacto actual.
 		 */
 		boolean registrada = false;
-		
+		for(int i=0; i < 50;i++) {
+			if(registroDeLLamadas[i] != null) {
+				registroDeLLamadas[i]= nueva;
+				registrada = true;
+			}
+		}
 		return registrada;
 	}
 	

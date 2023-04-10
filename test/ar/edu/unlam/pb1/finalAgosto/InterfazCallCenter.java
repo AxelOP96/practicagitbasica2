@@ -11,15 +11,18 @@ public class InterfazCallCenter {
 		System.out.println("1 - Incorporar zona de cobertura");
 		System.out.println("2 - Dar de alta un nuevo contacto");
 		System.out.println("3 - Realizar nueva llamada");
-		System.out.println("4 - Ver información del contacto");
+		System.out.println("4 - Ver informaciï¿½n del contacto");
 		System.out.println("9 - Salir");
 		System.out.println("************************");
 	}
 	
 	private static void incorporarZonaDeCobertura() {
 		/*
-		 * Se registra un nuevo código postal dentro de la zona de cobertura de la empresa
+		 * Se registra un nuevo cï¿½digo postal dentro de la zona de cobertura de la empresa
 		 */
+//		for(int i=0;i<Empresa[].length;i++) {
+//			
+//		}
 	}
 	
 	private static void darDeAltaNuevoContacto() {
@@ -42,7 +45,7 @@ public class InterfazCallCenter {
 	
 	private static void verInformacionDelContacto() {
 		/*
-		 * Se visualiza la información del contacto, incluso el listado de las llamadas que se le hicieron
+		 * Se visualiza la informaciï¿½n del contacto, incluso el listado de las llamadas que se le hicieron
 		 */
 	}
 }

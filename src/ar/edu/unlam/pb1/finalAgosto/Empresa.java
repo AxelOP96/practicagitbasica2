@@ -7,13 +7,22 @@ public class Empresa {
 	 */
 	private String nombre;
 	private boolean agregado;
+	private int zonaDeCobertura[] ;
+	private Contacto[] listaDeContactos;
+	
+	public Empresa() {
+		this.nombre = nombre;
+		this.agregado = agregado;
+		this.zonaDeCobertura = new int[100];
+		this.listaDeContactos = new Contacto[100];
+	}
 	
 	public String getNombreEmpresa() {
 		/*
 		 * Devuelve el nombre de la empresa
 		 */
 		
-		return "";
+		return this.nombre;
 	}
 	
 	public boolean agregarNuevoContacto(Contacto nuevo) {
@@ -21,23 +30,43 @@ public class Empresa {
 		/*
 		 * Incorpora un nuevo contacto a la empresa
 		 */
-		
-		return false;
+		boolean agregado = false;
+		for(int i=0;i<100;i++) {
+			if(listaDeContactos[i] == null) {
+				listaDeContactos[i] = nuevo;
+				agregado = true;
+				break;
+			}
+		}
+		return agregado;
 	}
 	
 	public boolean agregarNuevaZonaDeCobertura(int codigoPostal) {
 		/*
 		 * Incorpora una nueva zona de cobertura (Las zonas de cobertura se identifican por el codigo postal)
 		 */
-		
-		return false;
+		boolean zonaAgregada = false;
+		for(int i=0; i< 100;i++) {
+			if(zonaDeCobertura == null) {
+				zonaDeCobertura[i] = codigoPostal;
+				zonaAgregada = true;
+				break;
+			}
+		}
+		return zonaAgregada;
 	}	
 	
 	private boolean elCodigoPostalEstaDentroDeLaZonaDeCobertura(int codigoPostal) {
 		/*
 		 * Determina si un c�digo postal est� dentro de la zona de cobertura
 		 */
-		return false;
+		boolean estaDentro = false;
+		for(int i=0;i<100;i++) {
+			if(zonaDeCobertura[i] == codigoPostal && zonaDeCobertura[i]!= 0) {
+				estaDentro = true;
+			}
+		}
+		return estaDentro;
 	}
 	
 	public Contacto buscarCandidato() {
@@ -48,7 +77,8 @@ public class Empresa {
 		 * 3.	El c�digo postal del contacto debe existir en las zonas de cobertura existente.
 		 * 4.	Del conjunto de contactos resultante se debe seleccionar aleatoriamente el pr�ximo llamado.
 		 */
-
-		return null;
+		Contacto buscado = null;
+		
+		return buscado;
 	}
 }
