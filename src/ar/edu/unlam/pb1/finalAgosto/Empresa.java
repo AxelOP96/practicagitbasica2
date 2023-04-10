@@ -5,6 +5,8 @@ public class Empresa {
 	/*
 	 * Se deben incorporar los atributos necesarios.
 	 */
+	private String nombre;
+	private boolean agregado;
 	
 	public String getNombreEmpresa() {
 		/*
@@ -33,18 +35,18 @@ public class Empresa {
 	
 	private boolean elCodigoPostalEstaDentroDeLaZonaDeCobertura(int codigoPostal) {
 		/*
-		 * Determina si un código postal está dentro de la zona de cobertura
+		 * Determina si un cï¿½digo postal estï¿½ dentro de la zona de cobertura
 		 */
 		return false;
 	}
 	
 	public Contacto buscarCandidato() {
 		/*
-		 * Para determinar qué contacto el sistema debe mostrar, se debe realizar la siguiente búsqueda:
-		 * 1.	El contacto NO debe ser cliente aún.
-		 * 2.	El contacto desea ser llamado o al menos no informó lo contrario.
-		 * 3.	El código postal del contacto debe existir en las zonas de cobertura existente.
-		 * 4.	Del conjunto de contactos resultante se debe seleccionar aleatoriamente el próximo llamado.
+		 * Para determinar quï¿½ contacto el sistema debe mostrar, se debe realizar la siguiente bï¿½squeda:
+		 * 1.	El contacto NO debe ser cliente aï¿½n.
+		 * 2.	El contacto desea ser llamado o al menos no informï¿½ lo contrario.
+		 * 3.	El cï¿½digo postal del contacto debe existir en las zonas de cobertura existente.
+		 * 4.	Del conjunto de contactos resultante se debe seleccionar aleatoriamente el prï¿½ximo llamado.
 		 */
 
 		return null;
