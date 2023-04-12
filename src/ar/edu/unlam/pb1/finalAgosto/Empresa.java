@@ -47,7 +47,7 @@ public class Empresa {
 		 */
 		boolean zonaAgregada = false;
 		for(int i=0; i< 100;i++) {
-			if(zonaDeCobertura == null) {
+			if(zonaDeCobertura[i] == 0) {
 				zonaDeCobertura[i] = codigoPostal;
 				zonaAgregada = true;
 				break;
@@ -78,6 +78,9 @@ public class Empresa {
 		 * 4.	Del conjunto de contactos resultante se debe seleccionar aleatoriamente el pr�ximo llamado.
 		 */
 		Contacto buscado = null;
+		if(buscado.getEsCliente() == true && buscado.getDeseaLlamada() && elCodigoPostalEstaDentroDeLaZonaDeCobertura(buscado.getCodigoPostal())) {
+			
+		}
 		
 		return buscado;
 	}
