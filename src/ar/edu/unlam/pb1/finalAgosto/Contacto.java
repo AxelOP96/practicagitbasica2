@@ -41,7 +41,18 @@ public class Contacto {
 		this.deseaLlamada = deseaLlamada;
 		this.registroDeLLamadas = new Llamada[50];
 	}
-	
+	public Contacto(String nombre, Integer celular, Integer codigoPostal, String email) {
+		this.nombre = nombre;
+		this.celular = celular;
+		this.email = email;
+		this.codigoPostal = codigoPostal;
+		this.esCliente = true;
+		this.deseaLlamada = true;
+		this.registroDeLLamadas = new Llamada[50];
+		this.provincia = provincia;
+		this.direccion = direccion;
+		this.localidad = localidad;
+	}
 	public void esEmailValido(String eMail) {
 		/*
 		 * Eval�a si un String determinado puede ser almacenado como E-MAIL.
